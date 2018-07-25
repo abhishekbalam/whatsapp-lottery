@@ -7,12 +7,12 @@ Example Input:
 
 ```
 Pls enter your names:
-0) John Doe
-1) Jane Doe
-2) Jane Smith
-3) John Smith
+1. John Doe
+2. Jane Doe
+3. Jane Smith
+4. John Smith
 ```
 
 Returns a list of winners defined by the `max` variable in the code.
 
-[Lottery](http://extc-lottery.surge.sh)
+[Demo Link](http://extc-lottery.surge.sh)
