@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="Lottery to make quick decisions for EXTC-1.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-
+  <!--   <meta name="theme-color" content="#157878">
+ -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 
@@ -19,29 +19,30 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+    
     <style type="text/css">
-      body {
-  background: linear-gradient(-45deg, #210242, #9198e5);
-  height: 100vh;
-  margin: 0;
-  width: 100vw;
-}
+    body {
+      background: linear-gradient(-45deg, #210242, #9198e5);
+      height: 100vh;
+      margin: 0;
+      width: 100vw;
+    }
 
-.g-recaptcha{
-  display: inline-block;
-}
+    .g-recaptcha{
+      display: inline-block;
+    }
 
-@media only screen and (max-width: 600px) {
-  .recaptcha{
-    transform: scale(0.95);
-    transform-origin: 0 0;
-  }
-}
+    @media only screen and (max-width: 600px) {
+      .recaptcha{
+        transform: scale(0.95);
+        transform-origin: 0 0;
+      }
+    }
     </style>
+    
   </head>
   <body>
     <div class="container h-100">
-      
       <div class="row h-100 justify-content-center align-items-center">
         <div class="card col-md-10 col-lg-6 mx-auto">
           <div class="card-body" style="text-align: center;">
@@ -67,32 +68,6 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      document.getElementById("result").onclick = function(){
-        var data=document.getElementById("data").value.trim();
-        data = data.split(":").pop().split("\n");
-        for(var i=0;i<data.length;i++){
-          if(data[i]==""){
-            data.splice(i,1);
-          }
-          data[i]=data[i].split(".").pop().trim();
-        }
-        console.log(data);
-        var result=[];
-        while(result.length<3){
-          var x = Math.floor((Math.random() * data.length));
-          if(result.indexOf(x)<0){
-            result.push(x);
-          }
-        }
-        console.log(result);
-        var html="<h3 style='text-align:center'>The Winners are:</h3><br><ul style='text-align:justify'>";
-        for(var i=0;i<result.length;i++){
-          html=html+"<li>"+data[result[i]]+"</li>";
-        }
-        html=html+"</ul>";
-        document.getElementById("final").innerHTML=html;
-      }
-    </script> 
+    <script type="text/javascript" src="index.js"></script> 
   </body>
 </html>
