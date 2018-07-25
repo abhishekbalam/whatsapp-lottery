@@ -20,6 +20,9 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
     
+    <script src="confetti.js"></script>
+    <!-- <script src="extra.js"></script> -->
+    
     <style type="text/css">
     body {
       background: linear-gradient(-45deg, #210242, #9198e5);
@@ -27,10 +30,19 @@
       margin: 0;
       width: 100vw;
     }
+    #confetti{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+    }
     </style>
 
   </head>
   <body>
+    <!-- <canvas height='1' id='confetti' width='1'></canvas> -->
     <div class="container h-100">
       <div class="row h-100 justify-content-center align-items-center">
         <div class="card col-md-10 col-lg-6 mx-auto">
@@ -43,8 +55,8 @@
               <div id="final">
                 <p class="card-text form">
                   <div class="form-group">
-                    <label for="data">Enter list text:</label>
-                    <textarea id="data" class="form-control" rows="3"></textarea>
+                    <label for="data">Enter Whatsapp List text:</label>
+                    <textarea id="data" class="form-control" rows="5"></textarea>
                   </div> 
                 </p>
                 <div class="text-center">

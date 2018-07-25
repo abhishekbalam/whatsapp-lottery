@@ -22,6 +22,15 @@ document.getElementById("result").onclick = function(){
   for(var i=0;i<result.length;i++){
     html=html+"<li>"+data[result[i]]+"</li>";
   }
-  html=html+"</ul>";
+  html=html+"</ul><div class='text-center'><a href='.' class='btn btn-primary'>Retry</a></div>";
   document.getElementById("final").innerHTML=html;
+  
+  var canvaselem=document.createElement('canvas');
+  canvaselem.setAttribute('id', 'confetti');
+  canvaselem.setAttribute('height','1');
+  canvaselem.setAttribute('width','1');
+
+  document.body.appendChild(canvaselem);
+  document.getElementById("confetti").onclick=function() {this.parentNode.removeChild(this);};
+  conf();
 }
