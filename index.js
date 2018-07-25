@@ -2,9 +2,10 @@ document.getElementById("result").onclick = function(){
   var data=document.getElementById("data").value.trim();
   data = data.split(":").pop().split("\n");
   for(var i=0;i<data.length;i++){
-    if(data[i]==""){
-      data.splice(i,1);
-    }
+    // if(data[i]==""){
+    //   data.splice(i,1);
+    // }
+    data = data.filter(Boolean)
     data[i]=data[i].split(".").pop().trim();
   }
   console.log(data);
