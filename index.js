@@ -10,7 +10,7 @@ document.getElementById("result").onclick = function(){
   }
   console.log(data);
   var result=[];
-  var max=3;
+  var max=8;
   while(result.length<max){
     var x = Math.floor((Math.random() * data.length));
     if(result.indexOf(x)<0){
